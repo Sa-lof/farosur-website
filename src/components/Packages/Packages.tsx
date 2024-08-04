@@ -48,7 +48,7 @@ const Packages: React.FC = () => {
       animate={isInView ? "visible" : "hidden"}
       ref={ref}
       sx={{ marginTop: { xs: 12, sm: 12, md: 16, lg: 20 } }}
-      id="packages"
+      id="paquetes"
     >
       <Typography
         component={motion.div}

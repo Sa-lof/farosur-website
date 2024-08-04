@@ -14,7 +14,7 @@ const textVariants = {
 
 const Contact: React.FC = () => {
   return (
-    <Box sx={{ marginTop: { xs: 12, sm: 12, md: 16, lg: 20 } }} id="contact">
+    <Box sx={{ marginTop: { xs: 12, sm: 12, md: 16, lg: 20 } }} id="contacto">
       <Grid container spacing={4}>
         <Grid item xs={12} md={6}>
           <Typography

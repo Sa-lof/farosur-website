@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -10,9 +10,16 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import { Link as ScrollLink } from "react-scroll";
 
-const pages = ["Home", "Historia", "Paquetes", "Cadena de Valor", "Clientes"];
-const contact = "Contacto";
+const pages = [
+  { name: "Home", id: "home" },
+  { name: "Historia", id: "historia" },
+  { name: "Paquetes", id: "paquetes" },
+  { name: "Cadena de Valor", id: "cadena-de-valor" },
+  { name: "Clientes", id: "clientes" },
+];
+const contact = { name: "Contacto", id: "contacto" };
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -29,9 +36,9 @@ function Navbar() {
 
   return (
     <AppBar
-      position="static"
+      position="sticky"
       sx={{
-        backgroundColor: "#fff",
+        backgroundColor: "transparent",
         boxShadow: "none",
         margin: "32px 0",
       }}
@@ -106,12 +113,16 @@ function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.id} onClick={handleCloseNavMenu}>
+                  <ScrollLink to={page.id} smooth={true} duration={1000}>
+                    <Typography textAlign="center">{page.name}</Typography>
+                  </ScrollLink>
                 </MenuItem>
               ))}
-              <MenuItem key={contact} onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">{contact}</Typography>
+              <MenuItem key={contact.id} onClick={handleCloseNavMenu}>
+                <ScrollLink to={contact.id} smooth={true} duration={1000}>
+                  <Typography textAlign="center">{contact.name}</Typography>
+                </ScrollLink>
               </MenuItem>
             </Menu>
           </Box>
@@ -131,7 +142,7 @@ function Navbar() {
           >
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.id}
                 onClick={handleCloseNavMenu}
                 sx={{
                   my: 1,
@@ -147,7 +158,14 @@ function Navbar() {
                   },
                 }}
               >
-                {page}
+                <ScrollLink
+                  to={page.id}
+                  smooth={true}
+                  duration={1000}
+                  style={{ color: "inherit", textDecoration: "none" }}
+                >
+                  {page.name}
+                </ScrollLink>
               </Button>
             ))}
           </Box>
@@ -162,9 +180,21 @@ function Navbar() {
                   textTransform: "none",
                   px: "28px",
                   py: "12px",
+                  ":hover": {
+                    border: "1px solid #333333",
+                    backgroundColor: "transparent",
+                    color: "#333333",
+                  },
                 }}
               >
-                {contact}
+                <ScrollLink
+                  to={contact.id}
+                  smooth={true}
+                  duration={1000}
+                  style={{ color: "inherit", textDecoration: "none" }}
+                >
+                  {contact.name}
+                </ScrollLink>
               </Button>
             </Tooltip>
           </Box>

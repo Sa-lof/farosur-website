@@ -55,7 +55,9 @@ const Chain: React.FC = () => {
         color: "#fff",
         padding: { xs: 4, md: 8 },
         marginTop: { xs: 12, sm: 12, md: 16, lg: 20 },
+
       }}
+      id="cadena-de-valor"
     >
       <Typography
         component={motion.div}
