@@ -41,7 +41,7 @@ const History: React.FC = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <Box sx={{ marginTop: { xs: 12, sm: 12, md: 16, lg: 20 } }}>
+    <Box sx={{ marginTop: { xs: 12, sm: 12, md: 16, lg: 20 } }} id="history">
       <Typography
         component={motion.div}
         initial="hidden"

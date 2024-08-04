@@ -8,6 +8,8 @@ import Packages from "../components/Packages/Packages";
 import Chain from "../components/Chain/Chain";
 import Clients from "../components/Clients/Clients";
 import Projects from "../components/Projects/Projects";
+import Contact from "../components/Contact/Contact";
+import Footer from "../components/Footer/Footer";
 
 const Home: React.FC = () => {
   return (
@@ -34,7 +36,9 @@ const Home: React.FC = () => {
           }}
         >
           <Projects />
+          <Contact />
         </Box>
+        <Footer />
       </Box>
     </>
   );

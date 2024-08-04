@@ -27,6 +27,7 @@ const Header: React.FC = () => {
       sx={{
         color: "#fff",
       }}
+      id="home"
     >
       <Grid container spacing={2}>
         <Grid item sm={12} md={12} lg={7}>

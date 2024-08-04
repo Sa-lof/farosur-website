@@ -68,7 +68,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <Box sx={{ marginTop: { xs: 12, sm: 12, md: 16, lg: 20 } }}>
+    <Box sx={{ marginTop: { xs: 12, sm: 12, md: 16, lg: 20 } }} id="projects">
       <Grid container spacing={4}>
         {projectData.map((project, index) => (
           <Grid
