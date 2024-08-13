@@ -43,7 +43,7 @@ const Header: React.FC = () => {
                 md: "72px",
                 lg: "88px",
               },
-              color: "#333333",
+              color: "#3D4899",
             }}
           >
             Lorem ipsum lorem
@@ -60,7 +60,7 @@ const Header: React.FC = () => {
                 md: "72px",
                 lg: "88px",
               },
-              color: "#333333",
+              color: "#3D4899",
             }}
           >
             ipsum lorem ipsum
@@ -77,7 +77,7 @@ const Header: React.FC = () => {
                 md: "72px",
                 lg: "88px",
               },
-              color: "#333333",
+              color: "#3D4899",
             }}
           >
             lorem
@@ -111,7 +111,7 @@ const Header: React.FC = () => {
               variants={textVariants}
               variant="h5"
               sx={{
-                color: "#333333",
+                color: "#3D4899",
                 mb: 2,
                 fontSize: {
                   xs: "14px",
@@ -129,15 +129,15 @@ const Header: React.FC = () => {
               component={motion.button}
               variants={buttonVariants}
               sx={{
-                color: "#333333",
-                border: "1.5px solid #333333",
+                color: "#3D4899",
+                border: "1.5px solid #3D4899",
                 borderRadius: "50px",
                 textTransform: "none",
                 fontWeight: 600,
                 px: "28px",
                 py: "12px",
                 ":hover": {
-                  backgroundColor: "#333333",
+                  backgroundColor: "#3D4899",
                   color: "#fff",
                   fontWeight: 600,
                 },

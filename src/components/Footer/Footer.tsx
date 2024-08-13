@@ -5,6 +5,9 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
+// Import your logo image
+import FooterLogo from "../../assets/logo/footer_logo.png";
+
 const titleVariants = {
   hidden: { opacity: 0, y: -20 },
   visible: { opacity: 1, y: 0, transition: { duration: 1 } },
@@ -24,7 +27,7 @@ const Footer: React.FC = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "#333",
+        backgroundColor: "#3D4899",
         color: "#fff",
         padding: { xs: 4, md: 8 },
         marginTop: { xs: 12, sm: 12, md: 16, lg: 20 },
@@ -60,18 +63,22 @@ const Footer: React.FC = () => {
       </motion.div>
       <Grid container spacing={4} pt={8}>
         <Grid item xs={12} md={6}>
-          <Typography
+          <Box
             component={motion.div}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={textVariants}
-            variant="h4"
-            sx={{ fontWeight: "bold", fontSize: { xs: "24px", lg: "48px" } }}
           >
-            FARO <br />
-            SUR
-          </Typography>
+            <img
+              src={FooterLogo}
+              alt="Faro Sur Logo"
+              style={{
+                height: "auto", // Adjust the height or width as needed
+                maxWidth: "30%",
+              }}
+            />
+          </Box>
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography
@@ -123,7 +130,7 @@ const Footer: React.FC = () => {
                 variant="contained"
                 sx={{
                   backgroundColor: "#fff",
-                  color: "#333",
+                  color: "#3D4899",
                   width: 160,
                   height: 160,
                   display: "flex",
@@ -134,7 +141,7 @@ const Footer: React.FC = () => {
                   padding: 2,
                   borderRadius: 0,
                   ":hover": {
-                    backgroundColor: "#333333",
+                    backgroundColor: "#8FBFE0",
                     color: "#fff",
                   },
                 }}
@@ -161,7 +168,7 @@ const Footer: React.FC = () => {
                 variant="contained"
                 sx={{
                   backgroundColor: "#fff",
-                  color: "#333",
+                  color: "#3D4899",
                   width: 160,
                   height: 160,
                   display: "flex",
@@ -172,7 +179,7 @@ const Footer: React.FC = () => {
                   padding: 2,
                   borderRadius: 0,
                   ":hover": {
-                    backgroundColor: "#333333",
+                    backgroundColor: "#8FBFE0",
                     color: "#fff",
                   },
                 }}
@@ -199,7 +206,7 @@ const Footer: React.FC = () => {
                 variant="contained"
                 sx={{
                   backgroundColor: "#fff",
-                  color: "#333",
+                  color: "#3D4899",
                   width: 160,
                   height: 160,
                   display: "flex",
@@ -210,7 +217,7 @@ const Footer: React.FC = () => {
                   padding: 2,
                   borderRadius: 0,
                   ":hover": {
-                    backgroundColor: "#333333",
+                    backgroundColor: "#8FBFE0",
                     color: "#fff",
                   },
                 }}
@@ -248,6 +255,7 @@ const Footer: React.FC = () => {
             © Faro Sur 2024. Diseñado por{" "}
             <Link
               href="https://amoxtli.tech"
+              target="_blank"
               sx={{ color: "#fff", textDecorationColor: "white" }}
             >
               Amoxtli Web Developers

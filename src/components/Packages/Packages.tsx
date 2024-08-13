@@ -64,14 +64,15 @@ const Packages: React.FC = () => {
             md: "56px",
             lg: "72px",
           },
+          color: "#3D4899"
         }}
       >
-        Selecciona el <span style={{ color: "#b0b0b0" }}>paquete</span> para ti
+        Selecciona el <span style={{ color: "#8FBFE0" }}>paquete</span> para ti
       </Typography>
       <Box
         component={motion.div}
         variants={lineVariants}
-        sx={{ borderBottom: "2px solid #000", mb: { xs: 4, md: 6 } }}
+        sx={{ borderBottom: "2px solid #3D4899", mb: { xs: 4, md: 6 } }}
       />
       <Grid container spacing={4}>
         {packageData.map((pkg, index) => (
@@ -87,7 +88,7 @@ const Packages: React.FC = () => {
           >
             <Card
               sx={{
-                backgroundColor: "#d3d3d3",
+                backgroundColor: "#C0E4F3",
                 borderRadius: 0,
                 boxShadow: "none",
                 p: 4,
@@ -98,6 +99,7 @@ const Packages: React.FC = () => {
                   variant="h6"
                   sx={{
                     fontWeight: "bold",
+                    color: "#3D4899",
                     fontSize: {
                       xs: "20px",
                       sm: "24px",
@@ -112,7 +114,7 @@ const Packages: React.FC = () => {
                 <Box
                   component={motion.div}
                   variants={lineVariants}
-                  sx={{ borderBottom: "1px solid #333", mb: 2 }}
+                  sx={{ borderBottom: "1px solid #3D4899", mb: 2 }}
                 />
                 <Grid container spacing={2}>
                   {pkg.includes.map((item, idx) => (
@@ -121,6 +123,7 @@ const Packages: React.FC = () => {
                         <ListItem disableGutters>
                           <Typography
                             variant="body2"
+                            color={"#3D4899"}
                             sx={{
                               fontSize: {
                                 xs: "14px",
@@ -143,7 +146,7 @@ const Packages: React.FC = () => {
                   <Button
                     sx={{
                       color: "#fff",
-                      backgroundColor: "#333",
+                      backgroundColor: "#3D4899",
                       borderRadius: "50px",
                       textTransform: "none",
                       px: { xs: "12px", md: "24px" },
@@ -153,7 +156,9 @@ const Packages: React.FC = () => {
                         md: "12px",
                       },
                       ":hover": {
-                        backgroundColor: "#555",
+                        backgroundColor: "transparent",
+                        border : "1px solid #3D4899",
+                        color: "#3D4899",
                       },
                     }}
                   >

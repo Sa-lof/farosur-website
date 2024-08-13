@@ -59,9 +59,10 @@ const History: React.FC = () => {
             md: "56px",
             lg: "72px",
           },
+          color: "#3D4899",
         }}
       >
-        Nuestra <span style={{ color: "#b0b0b0" }}>historia</span>
+        Nuestra <span style={{ color: "#8FBFE0" }}>historia</span>
       </Typography>
       {historyData.map((item, index) => (
         <Grid
@@ -83,7 +84,7 @@ const History: React.FC = () => {
               viewport={{ once: true }}
               variants={textVariants}
               sx={{
-                backgroundColor: "#d3d3d3",
+                backgroundColor: "#C0E4F3",
                 height: 400,
                 display: "flex",
                 justifyContent: item.textAlign,
@@ -92,6 +93,7 @@ const History: React.FC = () => {
                 borderRadius: 0,
                 boxShadow: "none",
                 padding: 4,
+
               }}
             >
               <CardContent>
@@ -105,6 +107,7 @@ const History: React.FC = () => {
                       md: "28px",
                       lg: "32px",
                     },
+                    color: "#3D4899",
                   }}
                 >
                   {item.title}
@@ -118,6 +121,7 @@ const History: React.FC = () => {
                       md: "20px",
                       lg: "24px",
                     },
+                    color: "#3D4899",
                   }}
                 >
                   {item.description}

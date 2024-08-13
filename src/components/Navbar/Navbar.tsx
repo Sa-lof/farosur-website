@@ -12,6 +12,9 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { Link as ScrollLink } from "react-scroll";
 
+// Import your logo image
+import Logo from "../../assets/logo/logo.png";
+
 const pages = [
   { name: "Home", id: "home" },
   { name: "Historia", id: "historia" },
@@ -45,38 +48,42 @@ function Navbar() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
+          <Box
             component="a"
             href="/"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontWeight: 700,
-              textDecoration: "none",
-              color: "#333333",
+              alignItems: "center",
             }}
           >
-            Faro <br />
-            Sur
-          </Typography>
-          <Typography
-            variant="h5"
-            noWrap
+            <img
+              src={Logo}
+              alt="Faro Sur Logo"
+              style={{
+                height: "40px", // Adjust the height as needed
+                width: "auto",
+              }}
+            />
+          </Box>
+          <Box
             component="a"
             href="/"
             sx={{
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontWeight: 700,
-              textDecoration: "none",
-              color: "#333333",
+              alignItems: "center",
             }}
           >
-            Faro <br />
-            Sur
-          </Typography>
+            <img
+              src={Logo}
+              alt="Faro Sur Logo"
+              style={{
+                height: "30px", // Adjust the height as needed
+                width: "auto",
+              }}
+            />
+          </Box>
 
           <Box
             sx={{
@@ -133,8 +140,7 @@ function Navbar() {
               display: { xs: "none", md: "flex" },
               justifyContent: "center",
               alignItems: "center",
-              backgroundColor: "#F4F4F4",
-              opacity: 0.8,
+              backgroundColor: "rgba(192, 228, 243, 0.3)", // Use rgba for background opacity
               borderRadius: "10px",
               maxWidth: 690,
               mx: "auto",
@@ -149,11 +155,11 @@ function Navbar() {
                   display: "block",
                   textTransform: "none",
                   fontSize: "14px",
-                  color: "black",
+                  color: "#3D4899",
                   mx: 1,
                   ":hover": {
                     backgroundColor: "transparent",
-                    color: "#333333",
+                    color: "#3D4899",
                     fontWeight: 700,
                   },
                 }}
@@ -175,15 +181,15 @@ function Navbar() {
               <Button
                 sx={{
                   color: "white",
-                  backgroundColor: "#333333",
+                  backgroundColor: "#3D4899",
                   borderRadius: "50px",
                   textTransform: "none",
                   px: "28px",
                   py: "12px",
                   ":hover": {
-                    border: "1px solid #333333",
+                    border: "1px solid #3D4899",
                     backgroundColor: "transparent",
-                    color: "#333333",
+                    color: "#3D4899",
                   },
                 }}
               >

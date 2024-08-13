@@ -34,9 +34,10 @@ const Contact: React.FC = () => {
                 md: "56px",
                 lg: "72px",
               },
+              color: "#3D4899",
             }}
           >
-            Contacta a <span style={{ color: "#b0b0b0" }}>Faro Sur</span>
+            Contacta a <span style={{ color: "#8FBFE0" }}>Faro Sur</span>
           </Typography>
           <Typography
             component={motion.div}
@@ -48,6 +49,7 @@ const Contact: React.FC = () => {
             sx={{
               textAlign: "left",
               mb: { xs: 2, md: 4 },
+              color: "#3D4899",
               fontSize: {
                 xs: "14px",
                 sm: "16px",
@@ -74,6 +76,7 @@ const Contact: React.FC = () => {
                 md: "18px",
                 lg: "20px",
               },
+              color: "#8FBFE0",
             }}
           >
             (frase corta)
@@ -92,21 +95,23 @@ const Contact: React.FC = () => {
               variant="outlined"
               fullWidth
               sx={{
+                color: "#3D4899",
                 mb: 2,
                 "& .MuiOutlinedInput-root": {
                   "& fieldset": {
-                    borderColor: "#333333",
+                    borderColor: "#3D4899",
                   },
                   "&:hover fieldset": {
-                    borderColor: "#333333",
+                    borderColor: "#3D4899",
                   },
                   "&.Mui-focused fieldset": {
-                    borderColor: "#333333",
+                    borderColor: "#3D4899",
                   },
                 },
                 "& .MuiInputLabel-root": {
+                  color: "#3D4899", // Set the label color here
                   "&.Mui-focused": {
-                    color: "#333333",
+                    color: "#3D4899",
                   },
                 },
               }}
@@ -119,18 +124,19 @@ const Contact: React.FC = () => {
                 mb: 2,
                 "& .MuiOutlinedInput-root": {
                   "& fieldset": {
-                    borderColor: "#333333",
+                    borderColor: "#3D4899",
                   },
                   "&:hover fieldset": {
-                    borderColor: "#333333",
+                    borderColor: "#3D4899",
                   },
                   "&.Mui-focused fieldset": {
-                    borderColor: "#333333",
+                    borderColor: "#3D4899",
                   },
                 },
                 "& .MuiInputLabel-root": {
+                  color: "#3D4899", // Set the label color here
                   "&.Mui-focused": {
-                    color: "#333333",
+                    color: "#3D4899",
                   },
                 },
               }}
@@ -143,18 +149,19 @@ const Contact: React.FC = () => {
                 mb: 2,
                 "& .MuiOutlinedInput-root": {
                   "& fieldset": {
-                    borderColor: "#333333",
+                    borderColor: "#3D4899",
                   },
                   "&:hover fieldset": {
-                    borderColor: "#333333",
+                    borderColor: "#3D4899",
                   },
                   "&.Mui-focused fieldset": {
-                    borderColor: "#333333",
+                    borderColor: "#3D4899",
                   },
                 },
                 "& .MuiInputLabel-root": {
+                  color: "#3D4899", // Set the label color here
                   "&.Mui-focused": {
-                    color: "#333333",
+                    color: "#3D4899",
                   },
                 },
               }}
@@ -169,18 +176,19 @@ const Contact: React.FC = () => {
                 mb: 2,
                 "& .MuiOutlinedInput-root": {
                   "& fieldset": {
-                    borderColor: "#333333",
+                    borderColor: "#3D4899",
                   },
                   "&:hover fieldset": {
-                    borderColor: "#333333",
+                    borderColor: "#3D4899",
                   },
                   "&.Mui-focused fieldset": {
-                    borderColor: "#333333",
+                    borderColor: "#3D4899",
                   },
                 },
                 "& .MuiInputLabel-root": {
+                  color: "#3D4899", // Set the label color here
                   "&.Mui-focused": {
-                    color: "#333333",
+                    color: "#3D4899",
                   },
                 },
               }}
@@ -188,14 +196,16 @@ const Contact: React.FC = () => {
             <Button
               variant="contained"
               sx={{
-                backgroundColor: "#333333",
+                backgroundColor: "#3D4899",
                 color: "#fff",
                 borderRadius: "50px",
                 textTransform: "none",
                 px: 4,
                 py: 1.5,
                 ":hover": {
-                  backgroundColor: "#555555",
+                  border: "1px solid #3D4899",
+                  backgroundColor: "transparent",
+                  color: "#3D4899",
                 },
               }}
             >

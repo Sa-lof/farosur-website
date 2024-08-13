@@ -51,7 +51,7 @@ const Chain: React.FC = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "#333",
+        backgroundColor: "#3D4899",
         color: "#fff",
         padding: { xs: 4, md: 8 },
         marginTop: { xs: 12, sm: 12, md: 16, lg: 20 },
@@ -78,7 +78,7 @@ const Chain: React.FC = () => {
           },
         }}
       >
-        Nuestra <span style={{ color: "#b0b0b0" }}>cadena</span> de valor
+        Nuestra <span style={{ color: "#8FBFE0" }}>cadena</span> de valor
       </Typography>
       <Grid container spacing={4}>
         <Grid item xs={12} md={6}>

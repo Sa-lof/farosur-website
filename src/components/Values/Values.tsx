@@ -42,7 +42,7 @@ const Values: React.FC = () => {
       <Grid
         container
         spacing={2}
-        sx={{ backgroundColor: "#e0e0e0", padding: 6 }}
+        sx={{ backgroundColor: "#C0E4F3", padding: 6 }}
       >
         {valuesData.map((value, index) => (
           <Grid item xs={12} sm={6} md={6} lg={3} key={index}>
@@ -62,11 +62,11 @@ const Values: React.FC = () => {
               >
                 <Typography
                   variant="h6"
-                  sx={{ fontWeight: "bold", marginRight: 1 }}
+                  sx={{ fontWeight: "bold", marginRight: 1, color: "#3D4899" }}
                 >
                   {value.title}
                 </Typography>
-                <IconButton size="small" sx={{ color: "#333333" }}>
+                <IconButton size="small" sx={{ color: "#3D4899" }}>
                   <InfoIcon />
                 </IconButton>
               </Box>
@@ -77,7 +77,7 @@ const Values: React.FC = () => {
                 viewport={{ once: true }}
                 variants={lineVariants}
                 sx={{
-                  borderBottom: "2px solid #333333",
+                  borderBottom: "2px solid #3D4899",
                   width: "100%",
                   marginBottom: 1,
                 }}
@@ -89,7 +89,7 @@ const Values: React.FC = () => {
                 viewport={{ once: true }}
                 variants={textVariants}
                 variant="body2"
-                sx={{ color: "#333333" }}
+                sx={{ color: "#3D4899" }}
               >
                 {value.description}
               </Typography>
