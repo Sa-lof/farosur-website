@@ -99,7 +99,7 @@ function Navbar() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
             >
-              <MenuIcon sx={{ color: "#333333" }} />
+              <MenuIcon sx={{ color: "#3D4899" }} />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -140,7 +140,7 @@ function Navbar() {
               display: { xs: "none", md: "flex" },
               justifyContent: "center",
               alignItems: "center",
-              backgroundColor: "rgba(192, 228, 243, 0.3)", // Use rgba for background opacity
+              backgroundColor: "rgba(61, 72, 153, 0.5)", // Updated to #3D4899 with 30% opacity
               borderRadius: "10px",
               maxWidth: 690,
               mx: "auto",
@@ -155,11 +155,11 @@ function Navbar() {
                   display: "block",
                   textTransform: "none",
                   fontSize: "14px",
-                  color: "#3D4899",
+                  color: "white",
                   mx: 1,
                   ":hover": {
                     backgroundColor: "transparent",
-                    color: "#3D4899",
+                    color: "white",
                     fontWeight: 700,
                   },
                 }}
