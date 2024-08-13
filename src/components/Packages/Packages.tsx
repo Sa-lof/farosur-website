@@ -20,6 +20,10 @@ const packageData = [
     title: "Nombre paquete",
     includes: ["Incluye", "Incluye", "Incluye", "Incluye", "Incluye"],
   },
+  {
+    title: "Nombre paquete",
+    includes: ["Incluye", "Incluye", "Incluye", "Incluye", "Incluye"],
+  },
 ];
 
 const titleVariants = {
@@ -80,8 +84,8 @@ const Packages: React.FC = () => {
             item
             xs={12}
             sm={12}
-            md={6}
-            lg={6}
+            md={12}
+            lg={4}
             key={index}
             component={motion.div}
             variants={cardVariants}
@@ -128,8 +132,8 @@ const Packages: React.FC = () => {
                               fontSize: {
                                 xs: "14px",
                                 sm: "16px",
-                                md: "18px",
-                                lg: "20px",
+                                md: "12px",
+                                lg: "16px",
                               },
                             }}
                           >
