@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 
 // Variants for motion animations
@@ -13,10 +13,6 @@ const textVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.3 } },
 };
 
-const buttonVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } },
-};
 
 const Header: React.FC = () => {
   return (
@@ -35,6 +31,7 @@ const Header: React.FC = () => {
         color: "#fff",
         id: "home",
         paddingX: { xs: 2, sm: 3, md: 4 }, // Padding on the sides
+        textAlign: "center",
       }}
     >
       {/* Background Video */}
@@ -74,7 +71,7 @@ const Header: React.FC = () => {
 
       <Box
         sx={{
-          maxWidth: { xs: "100%", md: "70%" }, // Adjust the width of the content box
+          maxWidth: { xs: "100%", md: "80%" }, // Adjust the width of the content box
           textAlign: { xs: "center", md: "center" }, // Center text on small screens, left-align on medium and larger
           paddingX: { xs: 2, sm: 3, md: 2 }, // Padding adjustments
         }}
@@ -94,7 +91,7 @@ const Header: React.FC = () => {
             color: "#fff",
           }}
         >
-          Lorem ipsum lorem
+          TODO LO QUE TU MARCA NECESITA,
         </Typography>
         <Typography
           component={motion.div}
@@ -111,24 +108,7 @@ const Header: React.FC = () => {
             color: "#fff",
           }}
         >
-          ipsum lorem ipsum
-        </Typography>
-        <Typography
-          component={motion.div}
-          variants={textVariants}
-          variant="h1"
-          sx={{
-            fontWeight: 700,
-            fontSize: {
-              xs: "36px", // Adjusted for small screens
-              sm: "42px",
-              md: "52px",
-              lg: "72px",
-            },
-            color: "#fff",
-          }}
-        >
-          lorem
+          SIN COMPLICACIONES
         </Typography>
 
         <Box
@@ -142,39 +122,34 @@ const Header: React.FC = () => {
             variant="h5"
             sx={{
               color: "#fff",
+              fontWeight: 300,
               mb: 4,
               fontSize: {
                 xs: "14px",
                 sm: "16px",
                 md: "18px",
-                lg: "20px",
+                lg: "28px",
               },
+              maxWidth: {
+                xs: "90%", // Adjusted for mobile
+                sm: "80%", // Adjusted for small screens
+                md: "60%", // Adjusted for larger screens
+                lg: "70%", // Adjusted for larger screens
+              },
+              lineHeight: {
+                xs: "1.4", // More compact for smaller screens
+                sm: "1.5",
+                md: "1.6", // Default for larger screens
+              },
+              letterSpacing: "0.01em",
+              mx: "auto", // Center the text horizontally
+              textAlign: { xs: "center", md: "center" },
             }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a
-            urna sapien. Integer eget felis eleifend, auctor est vitae,
-            facilisis neque.
+            Materializamos tu visión simplificando cada parte del proceso, todo
+            a través de atención 100% personalizada de la mano de expertos.
           </Typography>
-          <Button
-            component={motion.button}
-            variants={buttonVariants}
-            sx={{
-              color: "#fff",
-              border: "1.5px solid #fff",
-              borderRadius: "50px",
-              textTransform: "none",
-              fontWeight: 600,
-              px: "28px",
-              py: "12px",
-              ":hover": {
-                backgroundColor: "#fff",
-                color: "#3D4899",
-                fontWeight: 600,
-              },
-            }}
-          >
-            Ver más
-          </Button>
+          
         </Box>
       </Box>
     </Box>

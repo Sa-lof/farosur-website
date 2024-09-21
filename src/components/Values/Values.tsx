@@ -1,28 +1,35 @@
 import React from "react";
 import { Grid, Box, Typography, IconButton } from "@mui/material";
-import InfoIcon from "@mui/icons-material/Info";
+import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
+import PersonIcon from "@mui/icons-material/Person";
+import BuildIcon from "@mui/icons-material/Build";
+import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 import { motion } from "framer-motion";
 
 const valuesData = [
   {
-    title: "Lorem ipsum",
+    title: "Sin complicaciones",
     description:
-      "Morbi a urna sapien. Integer eget felis eleifend, auctor est vitae, facilisis neque. Sed feugiat nisl lectus, et elementum dolor condimentum ut.",
+      "Evita retrasos y problemáticas, deja tu proyecto en nuestras manos y lo hacemos crecer.",
+    icon: <AssignmentTurnedInIcon />, // Icon for "Sin complicaciones"
   },
   {
-    title: "Lorem ipsum",
+    title: "Atención personalizada",
     description:
-      "Morbi a urna sapien. Integer eget felis eleifend, auctor est vitae, facilisis neque. Sed feugiat nisl lectus, et elementum dolor condimentum ut.",
+      "Te llevamos de la mano en cada parte del proceso y ajustamos a tus necesidades.",
+    icon: <PersonIcon />, // Icon for "Atención personalizada"
   },
   {
-    title: "Lorem ipsum",
+    title: "Proveemos herramientas",
     description:
-      "Morbi a urna sapien. Integer eget felis eleifend, auctor est vitae, facilisis neque. Sed feugiat nisl lectus, et elementum dolor condimentum ut.",
+      "Te asesoramos y te brindamos todo lo necesario para la manufactura de tu marca.",
+    icon: <BuildIcon />, // Icon for "Proveemos herramientas"
   },
   {
-    title: "Lorem ipsum",
+    title: "Proveedor con impacto social",
     description:
-      "Morbi a urna sapien. Integer eget felis eleifend, auctor est vitae, facilisis neque. Sed feugiat nisl lectus, et elementum dolor condimentum ut.",
+      "Como empresa socialmente responsable, podemos nutrir tu propuesta de valor.",
+    icon: <VolunteerActivismIcon />, // Icon for "Proveedor con impacto social"
   },
 ];
 
@@ -38,7 +45,7 @@ const lineVariants = {
 
 const Values: React.FC = () => {
   return (
-    <Box sx={{ marginTop: { xs: 8, sm: 4, md: 4, lg: 8 }, overflow: "hidden" }}>
+    <Box sx={{ overflow: "hidden" }}>
       <Grid
         container
         spacing={2}
@@ -67,7 +74,7 @@ const Values: React.FC = () => {
                   {value.title}
                 </Typography>
                 <IconButton size="small" sx={{ color: "#3D4899" }}>
-                  <InfoIcon />
+                  {value.icon} {/* Render the icon dynamically */}
                 </IconButton>
               </Box>
               <Box
