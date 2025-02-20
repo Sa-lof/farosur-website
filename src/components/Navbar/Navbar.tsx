@@ -13,14 +13,13 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link as ScrollLink } from "react-scroll";
 
 // Import your logo image
-import Logo from "../../assets/logo/logo.png";
+import Logo from "../../assets/logo/Layer_1.png";
 
 const pages = [
-  { name: "Home", id: "home" },
-  { name: "Historia", id: "historia" },
-  { name: "Paquetes", id: "paquetes" },
-  { name: "Cadena de Valor", id: "cadena-de-valor" },
-  { name: "Clientes", id: "clientes" },
+  { name: "Orígenes", id: "home" },
+  { name: "Historias", id: "historia" },
+  { name: "Clientes", id: "paquetes" },
+  { name: "Impacto social", id: "cadena-de-valor" },
 ];
 const contact = { name: "Contacto", id: "contacto" };
 
@@ -140,7 +139,7 @@ function Navbar() {
               display: { xs: "none", md: "flex" },
               justifyContent: "center",
               alignItems: "center",
-              backgroundColor: "rgba(61, 72, 153, 0.5)", // Updated to #3D4899 with 30% opacity
+              backgroundColor: "transparent", // Updated to #3D4899 with 30% opacity
               borderRadius: "10px",
               maxWidth: 690,
               mx: "auto",
@@ -155,11 +154,11 @@ function Navbar() {
                   display: "block",
                   textTransform: "none",
                   fontSize: "14px",
-                  color: "white",
+                  color: "#67675D",
                   mx: 1,
                   ":hover": {
                     backgroundColor: "transparent",
-                    color: "white",
+                    color: "#6F6860",
                     fontWeight: 700,
                   },
                 }}
@@ -181,15 +180,15 @@ function Navbar() {
               <Button
                 sx={{
                   color: "white",
-                  backgroundColor: "#3D4899",
+                  backgroundColor: "#6F6860",
                   borderRadius: "50px",
                   textTransform: "none",
                   px: "28px",
                   py: "12px",
                   ":hover": {
-                    border: "1px solid #3D4899",
+                    border: "1px solid #6F6860",
                     backgroundColor: "transparent",
-                    color: "#3D4899",
+                    color: "#6F6860",
                   },
                 }}
               >

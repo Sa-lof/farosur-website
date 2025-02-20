@@ -52,7 +52,7 @@ const Clients: React.FC = () => {
   };
 
   return (
-    <Box sx={{ marginTop: { xs: 12, sm: 12, md: 16, lg: 20 }, overflow: "hidden" }} id="clientes">
+    <Box sx={{ marginTop: { xs: 12, sm: 12, md: 16, lg: 20 }, overflow: "hidden", display:"none"}} id="clientes">
       <Slider {...settings}>
         {clientsData.map((client, index) => (
           <Box key={index} sx={{ padding: 2 }}>

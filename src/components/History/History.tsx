@@ -1,185 +1,146 @@
 import React, { useRef } from "react";
-import { Box, Grid, Typography, Card, CardContent } from "@mui/material";
-import { motion, useInView } from "framer-motion";
+import { Box, Typography, Card, CardContent, IconButton } from "@mui/material";
 import Slider from "react-slick";
+import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 
 const historyData = [
   {
-    title: "Nuestra Historia en Hunucmá: Confeccionando Calidad y Confianza",
+    title: "Lorem ipsum",
     description:
-      "En el corazón de Yucatán, nuestra maquila 100% mexicana se especializa en la confección de lencería y trajes de baño. Con más de 15 años de experiencia, nos destacamos por la calidad y la innovación. Somos un equipo de artesanos comprometidos con la excelencia, constantemente mejorando procesos para ofrecer productos únicos. Más que una fábrica, somos una familia impulsando la economía local y el talento mexicano.",
-    imagePosition: "right",
-    textAlign: "start",
-    images: [
-      "https://via.placeholder.com/400",
-      "https://via.placeholder.com/400/FF0000/FFFFFF",
-      "https://via.placeholder.com/400/0000FF/FFFFFF",
-    ], // Array of images
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
+    image: "https://www.solumex.com/wp-content/uploads/2013/11/dummy-image-square.jpg",
   },
   {
-    title: "Comprometidos con el Bienestar, la Igualdad y el Crecimiento Local",
-    description: "En nuestra maquila en Hunucmá, Yucatán, estamos comprometidos con los ODS 5, 8 y 10, promoviendo trabajo decente, crecimiento económico e igualdad de oportunidades. Nuestro equipo, mayormente local, mejora su calidad de vida mientras contribuye al desarrollo de la comunidad. Valoramos la cultura y tradiciones de Hunucmá, creando un ambiente de respeto e identidad local.",
-    imagePosition: "left",
-    textAlign: "end",
-    images: [
-      "https://via.placeholder.com/400",
-      "https://via.placeholder.com/400/FF0000/FFFFFF",
-      "https://via.placeholder.com/400/0000FF/FFFFFF",
-    ],
+    title: "Lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
+    image: "https://www.solumex.com/wp-content/uploads/2013/11/dummy-image-square.jpg",
   },
   {
-    title: "Empoderamiento Femenino y Apoyo al Comercio Local",
-    description: "El 85% de nuestro equipo está conformado por mujeres capacitadas, a quienes ofrecemos herramientas y educación constante. A través de programas especializados, apoyamos a amas de casa para que trabajen desde sus hogares con flexibilidad. Además, priorizamos proveedores locales de Yucatán, fortaleciendo el comercio y creando relaciones duraderas en la región.",
-    imagePosition: "right",
-    textAlign: "start",
-    images: [
-      "https://via.placeholder.com/400",
-      "https://via.placeholder.com/400/FF0000/FFFFFF",
-      "https://via.placeholder.com/400/0000FF/FFFFFF",
-    ],
+    title: "Lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
+    image: "https://www.solumex.com/wp-content/uploads/2013/11/dummy-image-square.jpg",
+  },
+  {
+    title: "Lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
+    image: "https://www.solumex.com/wp-content/uploads/2013/11/dummy-image-square.jpg",
   },
 ];
 
-// Variants for framer-motion animations
-const titleVariants = {
-  hidden: { opacity: 0, y: -50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+type ArrowProps = {
+  onClick?: () => void;
 };
 
-const textVariants = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 1 } },
-};
+const CustomPrevArrow: React.FC<ArrowProps> = ({ onClick }) => (
+  <IconButton
+    onClick={onClick}
+    sx={{
+      position: "absolute",
+      left: -40,
+      top: "50%",
+      transform: "translateY(-50%)",
+      zIndex: 1,
+    }}
+  >
+    <ArrowBackIos />
+  </IconButton>
+);
 
-const History: React.FC = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+const CustomNextArrow: React.FC<ArrowProps> = ({ onClick }) => (
+  <IconButton
+    onClick={onClick}
+    sx={{
+      position: "absolute",
+      right: -40,
+      top: "50%",
+      transform: "translateY(-50%)",
+      zIndex: 1,
+    }}
+  >
+    <ArrowForwardIos />
+  </IconButton>
+);
 
-  // Settings for the slider (carousel)
+const HistoryCarousel = () => {
+  const sliderRef = useRef<Slider>(null);
+
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: false,
-    autoplay: true,
+    prevArrow: <CustomPrevArrow onClick={() => sliderRef.current?.slickPrev()} />,
+    nextArrow: <CustomNextArrow onClick={() => sliderRef.current?.slickNext()} />,
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <Box sx={{ marginTop: { xs: 12, sm: 12, md: 16, lg: 20 } }} id="historia">
+    <Box sx={{ py: 6, backgroundColor: "#F8F7F5", px: 4 }}>
       <Typography
-        component={motion.div}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        variants={titleVariants}
-        ref={ref}
-        variant="h2"
-        sx={{
-          fontWeight: "bold",
-          mb: 4,
-          textAlign: "right",
-          fontSize: {
-            xs: "32px",
-            sm: "48px",
-            md: "56px",
-            lg: "72px",
-          },
-          color: "#3D4899",
-        }}
+        variant="h3"
+        sx={{ mb: 6, color: "#5A5147", textAlign: "right"}}
       >
-        Nuestra <span style={{ color: "#8FBFE0" }}>historia</span>
+        Historias
       </Typography>
-      {historyData.map((item, index) => (
-        <Grid
-          container
-          spacing={2}
-          sx={{
-            mb: 6,
-            alignItems: "center",
-            flexDirection:
-              item.imagePosition === "left" ? "row-reverse" : "row",
-          }}
-          key={index}
-        >
-          <Grid item xs={12} md={6}>
+      <Box sx={{ position: "relative", maxWidth: "90%", mx: "auto" }}>
+        <Slider ref={sliderRef} {...settings}>
+          {historyData.map((item, index) => (
             <Card
-              component={motion.div}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={textVariants}
+              key={index}
               sx={{
-                backgroundColor: "#C0E4F3",
-                height: 400,
-                display: "flex",
-                justifyContent: item.textAlign,
-                alignItems: "start",
-                textAlign: item.textAlign,
-                borderRadius: 0,
                 boxShadow: "none",
-                padding: 4,
+                mx: 2,
+                textAlign: "center",
+                backgroundColor: "#F8F7F5",
               }}
             >
-              <CardContent>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    fontWeight: 600,
-                    fontSize: {
-                      xs: "20px",
-                      sm: "24px",
-                      md: "28px",
-                      lg: "32px",
-                    },
-                    color: "#3D4899",
-                    mb: 2,
+              <Box
+                sx={{
+                  width: 300,
+                  height: 300,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  overflow: "hidden",
+                  mx: "auto",
+                  borderRadius: 2,
+                }}
+              >
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
                   }}
-                >
+                />
+              </Box>
+              <CardContent>
+                <Typography variant="h6" sx={{ fontWeight: "bold" }}>
                   {item.title}
                 </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    fontSize: {
-                      xs: "12px",
-                      sm: "14px",
-                      md: "16px",
-                      lg: "22px",
-                    },
-                    color: "#3D4899",
-                  }}
-                >
+                <Typography variant="body2" sx={{ color: "gray" }}>
                   {item.description}
                 </Typography>
               </CardContent>
             </Card>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Slider {...settings}>
-              {item.images.map((imageUrl, imgIndex) => (
-                <Card
-                  key={imgIndex}
-                  sx={{
-                    backgroundImage: `url(${imageUrl})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    height: 465,
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    textAlign: "center",
-                    borderRadius: 0,
-                    boxShadow: "none",
-                  }}
-                ></Card>
-              ))}
-            </Slider>
-          </Grid>
-        </Grid>
-      ))}
+          ))}
+        </Slider>
+      </Box>
     </Box>
   );
 };
 
-export default History;
+export default HistoryCarousel;
