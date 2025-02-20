@@ -15,6 +15,7 @@ const textVariants = {
 const Header: React.FC = () => {
   return (
     <>
+      {/* Texto superior */}
       <Box
         sx={{
           textAlign: "center",
@@ -26,7 +27,8 @@ const Header: React.FC = () => {
       >
         Un espacio destinado a la <strong>creación</strong> y <strong>desarrollo</strong> de trajes de baño situado en la <strong>Península de Yucatán</strong>
       </Box>
-    
+
+      {/* Imagen con texto alineado a la derecha */}
       <Box
         component={motion.div}
         initial="hidden"
@@ -36,36 +38,25 @@ const Header: React.FC = () => {
           position: "relative",
           height: "70vh",
           width: "100%",
-          backgroundColor: "#E0E0E0",
+          backgroundImage: "url('https://www.solumex.com/wp-content/uploads/2013/11/dummy-image-square.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
-          flexDirection: "column",
-          padding: "16px",
+          alignItems: "flex-end",
+          justifyContent: "flex-end",
+          paddingBottom: "32px",
+          paddingRight: "48px",
         }}
       >
         <Typography
           component={motion.p}
           variants={textVariants}
           sx={{
-            fontSize: "64px",
-            fontWeight: "500",
-            color: "#9E9E9E",
-          }}
-        >
-          1920 x 600
-        </Typography>
-
-        <Typography
-          component={motion.p}
-          variants={textVariants}
-          sx={{
-            position: "absolute",
-            bottom: "16px",
-            fontSize: "24px",
+            fontSize: "30px",
             fontWeight: "400",
             color: "#4E4E4E",
+            textAlign: "right",
+            paddingRight: "5%"
           }}
         >
           Somos mujeres creando
