@@ -30,42 +30,11 @@ const historyData = [
   },
 ];
 
-type ArrowProps = {
-  onClick?: () => void;
-};
-
-const CustomPrevArrow: React.FC<ArrowProps> = ({ onClick }) => (
-  <IconButton
-    onClick={onClick}
-    sx={{
-      position: "absolute",
-      left: -40,
-      top: "50%",
-      transform: "translateY(-50%)",
-      zIndex: 1,
-    }}
-  >
-    <ArrowBackIos />
-  </IconButton>
-);
-
-const CustomNextArrow: React.FC<ArrowProps> = ({ onClick }) => (
-  <IconButton
-    onClick={onClick}
-    sx={{
-      position: "absolute",
-      right: -40,
-      top: "50%",
-      transform: "translateY(-50%)",
-      zIndex: 1,
-    }}
-  >
-    <ArrowForwardIos />
-  </IconButton>
-);
-
 const HistoryCarousel = () => {
   const sliderRef = useRef<Slider>(null);
+
+  const handlePrev = () => sliderRef.current?.slickPrev();
+  const handleNext = () => sliderRef.current?.slickNext();
 
   const settings = {
     dots: false,
@@ -73,9 +42,13 @@ const HistoryCarousel = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    prevArrow: <CustomPrevArrow onClick={() => sliderRef.current?.slickPrev()} />,
-    nextArrow: <CustomNextArrow onClick={() => sliderRef.current?.slickNext()} />,
     responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
       {
         breakpoint: 960,
         settings: {
@@ -86,58 +59,88 @@ const HistoryCarousel = () => {
   };
 
   return (
-    <Box sx={{ py: 6, backgroundColor: "#F8F7F5", px: 8 }}>
-      <Typography
-        variant="h3"
-        sx={{ mb: 6, color: "#5A5147", textAlign: "right"}}
-      >
+    <Box sx={{ py: 6, backgroundColor: "#F8F7F5", px: { xs: 2, md: 8 } }}>
+      <Typography variant="h3" sx={{ mb: 4, color: "#5A5147", textAlign: "center" }}>
         Historias
       </Typography>
-      <Box sx={{ position: "relative", maxWidth: "90%", mx: "auto" }}>
+      <Box sx={{ position: "relative", maxWidth: "100%", mx: "auto", overflow: "hidden" }}>
         <Slider ref={sliderRef} {...settings}>
           {historyData.map((item, index) => (
-            <Card
-              key={index}
-              sx={{
-                boxShadow: "none",
-                mx: 2,
-                textAlign: "left",
-                backgroundColor: "#F8F7F5",
-              }}
-            >
-              <Box
+            <Box key={index} sx={{ px: 2 }}>
+              <Card
                 sx={{
-                  width: {sm:200, md:300},
-                  height: 300,
-                  display: "flex",
-                  alignItems: "left",
-                  justifyContent: "left",
-                  overflow: "hidden",
-                  mx: "auto",
-                  borderRadius: 2,
+                  boxShadow: "none",
+                  textAlign: "left",
+                  backgroundColor: "#F8F7F5",
+                  mx: 1, 
                 }}
               >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  style={{
+                <Box
+                  sx={{
                     width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
+                    height: 300,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    overflow: "hidden",
+                    borderRadius: 2,
                   }}
-                />
-              </Box>
-              <CardContent>
-                <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-                  {item.title}
-                </Typography>
-                <Typography variant="body2" sx={{ color: "gray" }}>
-                  {item.description}
-                </Typography>
-              </CardContent>
-            </Card>
+                >
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                </Box>
+                <CardContent>
+                  <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+                    {item.title}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: "gray" }}>
+                    {item.description}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Box>
           ))}
         </Slider>
+
+        {/* Botones de navegación */}
+        <IconButton
+          aria-label="Anterior"
+          onClick={handlePrev}
+          sx={{
+            position: "absolute",
+            left: 0,
+            top: "50%",
+            transform: "translateY(-50%)",
+            zIndex: 2,
+            backgroundColor: "rgba(255,255,255,0.7)",
+            "&:hover": { backgroundColor: "rgba(255,255,255,0.9)" },
+          }}
+        >
+          <ArrowBackIos />
+        </IconButton>
+
+        <IconButton
+          aria-label="Siguiente"
+          onClick={handleNext}
+          sx={{
+            position: "absolute",
+            right: 0,
+            top: "50%",
+            transform: "translateY(-50%)",
+            zIndex: 2,
+            backgroundColor: "rgba(255,255,255,0.7)",
+            "&:hover": { backgroundColor: "rgba(255,255,255,0.9)" },
+          }}
+        >
+          <ArrowForwardIos />
+        </IconButton>
       </Box>
     </Box>
   );
