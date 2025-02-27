@@ -2,31 +2,91 @@ import React, { useRef } from "react";
 import { Box, Typography, Card, CardContent, IconButton } from "@mui/material";
 import Slider from "react-slick";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
+import Antonio from "../../assets/stories/Antonio.jpg";
+import Araceli from "../../assets/stories/Araceli.jpg";
+import Concepcion from "../../assets/stories/Concepcion.jpg";
+import Glendy from "../../assets/stories/Glendy.jpg";
+import Leticia from "../../assets/stories/Leticia.jpg";
+import Luisa from "../../assets/stories/Luisa.jpg";
+import Rita from "../../assets/stories/Rita.jpg";
+import Rosalba from "../../assets/stories/Rosalba.jpg";
+import Ruth from "../../assets/stories/Ruth.jpg";
+import Socorro from "../../assets/stories/Socorro.jpg";
+import Teresa from "../../assets/stories/Teresa.jpg";
+import Veronica from "../../assets/stories/Veronica.jpg";
 
 const historyData = [
   {
-    title: "Lorem ipsum",
+    title: "Antonio",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
-    image: "https://www.solumex.com/wp-content/uploads/2013/11/dummy-image-square.jpg",
+    image: Antonio,
   },
   {
-    title: "Lorem ipsum",
+    title: "Araceli",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
-    image: "https://www.solumex.com/wp-content/uploads/2013/11/dummy-image-square.jpg",
+    image: Araceli,
   },
   {
-    title: "Lorem ipsum",
+    title: "Concepción",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
-    image: "https://www.solumex.com/wp-content/uploads/2013/11/dummy-image-square.jpg",
+    image: Concepcion,
   },
   {
-    title: "Lorem ipsum",
+    title: "Glendy",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
-    image: "https://www.solumex.com/wp-content/uploads/2013/11/dummy-image-square.jpg",
+    image: Glendy,
+  },
+  {
+    title: "Leticia",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
+    image: Leticia,
+  },
+  {
+    title: "Luisa",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
+    image: Luisa,
+  },
+  {
+    title: "Rita",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
+    image: Rita,
+  },
+  {
+    title: "Rosalba",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
+    image: Rosalba,
+  },
+  {
+    title: "Ruth",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
+    image: Ruth,
+  },
+  {
+    title: "Socorro",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
+    image: Socorro,
+  },
+  {
+    title: "Teresa",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
+    image: Teresa,
+  },
+  {
+    title: "Verónica",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
+    image: Veronica,
   },
 ];
 
@@ -60,10 +120,20 @@ const HistoryCarousel = () => {
 
   return (
     <Box sx={{ py: 6, backgroundColor: "#F8F7F5", px: { xs: 2, md: 8 } }}>
-      <Typography variant="h3" sx={{ mb: 4, color: "#5A5147", textAlign: "right" }}>
+      <Typography
+        variant="h3"
+        sx={{ mb: 4, color: "#5A5147", textAlign: "right" }}
+      >
         Historias
       </Typography>
-      <Box sx={{ position: "relative", maxWidth: "100%", mx: "auto", overflow: "hidden" }}>
+      <Box
+        sx={{
+          position: "relative",
+          maxWidth: "100%",
+          mx: "auto",
+          overflow: "hidden",
+        }}
+      >
         <Slider ref={sliderRef} {...settings}>
           {historyData.map((item, index) => (
             <Box key={index} sx={{ px: 2 }}>
@@ -72,18 +142,17 @@ const HistoryCarousel = () => {
                   boxShadow: "none",
                   textAlign: "left",
                   backgroundColor: "#F8F7F5",
-                  mx: 1, 
+                  mx: 1,
                 }}
               >
+                {/* Square image container */}
                 <Box
                   sx={{
                     width: "100%",
-                    height: 300,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
+                    aspectRatio: "1 / 1", // Ensures the Box is always square
                     overflow: "hidden",
                     borderRadius: 2,
+                    position: "relative", // for older Safari you may need to use the padding-bottom hack
                   }}
                 >
                   <img
