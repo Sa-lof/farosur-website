@@ -18,8 +18,9 @@ import Logo from "../../assets/logo/Layer_1.png";
 const pages = [
   { name: "Orígenes", id: "home" },
   { name: "Historias", id: "historia" },
-  { name: "Clientes", id: "paquetes" },
-  { name: "Impacto social", id: "cadena-de-valor" },
+  { name: "Impacto social", id: "impacto" },
+  { name: "Clientes", id: "clientes" },
+  { name: "Servicios", id: "servicios" },
 ];
 const contact = { name: "Contacto", id: "contacto" };
 

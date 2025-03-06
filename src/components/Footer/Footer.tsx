@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Grid, Link } from "@mui/material";
-import { Facebook, Instagram } from "@mui/icons-material";
+import { Facebook, Instagram, LinkedIn} from "@mui/icons-material";
 import Logo from "../../assets/logo/Layer_1.png";
 
 const Footer = () => {
@@ -55,6 +55,9 @@ const Footer = () => {
             </Link>
             <Link href="#" color="inherit">
               <Instagram fontSize="large" />
+            </Link>
+            <Link href="#" color="inherit">
+              <LinkedIn fontSize="large" />
             </Link>
           </Box>
         </Grid>

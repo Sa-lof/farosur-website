@@ -12,6 +12,7 @@ const Origenes: React.FC = () => {
         justifyContent: "center",
         px: 4, // Padding para evitar que el contenido toque los bordes
       }}
+      id="home"
     >
       <Grid
         container

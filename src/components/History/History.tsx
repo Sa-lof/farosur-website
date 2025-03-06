@@ -119,7 +119,7 @@ const HistoryCarousel = () => {
   };
 
   return (
-    <Box sx={{ py: 6, backgroundColor: "#F8F7F5", px: { xs: 2, md: 8 } }}>
+    <Box sx={{ py: 6, backgroundColor: "#F8F7F5", px: { xs: 2, md: 8 } }} id="historia">
       <Typography
         variant="h3"
         sx={{ mb: 4, color: "#5A5147", textAlign: "right" }}

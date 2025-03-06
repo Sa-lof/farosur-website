@@ -52,7 +52,7 @@ const Clients: React.FC = () => {
   };
 
   return (
-    <Box sx={{ textAlign: "center", py: 6, px: 4 }}>
+    <Box sx={{ textAlign: "center", py: 6, px: 4 }} id="clientes">
       <Typography variant="h3" sx={{ mb: 6, color: "#5A5147", textAlign: "left" }}>
         Clientes
       </Typography>

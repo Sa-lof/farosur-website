@@ -11,7 +11,7 @@ const servicesData = [
 
 const Servicios = () => {
   return (
-    <Box sx={{ textAlign: "center", py: 6 }}>
+    <Box sx={{ textAlign: "center", py: 6 }} id="servicios">
       <Typography
         variant="h3"
         sx={{ mb: 6, color: "#5A5147" }}

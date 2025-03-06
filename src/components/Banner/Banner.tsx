@@ -17,6 +17,7 @@ const ImpactoSocial = () => {
         alignItems: "center",
         justifyContent: "center",
       }}
+      id="impacto"
     >
       <Typography
         component={motion.h2}
