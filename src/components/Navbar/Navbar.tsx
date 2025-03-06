@@ -153,7 +153,7 @@ function Navbar() {
                   my: 1,
                   display: "block",
                   textTransform: "none",
-                  fontSize: "14px",
+                  fontSize: "18px",
                   color: "#67675D",
                   mx: 1,
                   ":hover": {

@@ -169,7 +169,7 @@ const HistoryCarousel = () => {
                   <Typography variant="h6" sx={{ fontWeight: "bold" }}>
                     {item.title}
                   </Typography>
-                  <Typography variant="body2" sx={{ color: "gray" }}>
+                  <Typography variant="body2" sx={{ color: "gray", fontSize:"16px"}}>
                     {item.description}
                   </Typography>
                 </CardContent>
