@@ -15,19 +15,6 @@ const textVariants = {
 const Header: React.FC = () => {
   return (
     <>
-      {/* Texto superior */}
-      <Box
-        sx={{
-          textAlign: "center",
-          padding: "16px",
-          fontSize: "18px",
-          fontWeight: "400",
-          color: "#4E4E4E",
-        }}
-      >
-        Un espacio destinado a la <strong>creación</strong> y <strong>desarrollo</strong> de trajes de baño situado en la <strong>Península de Yucatán</strong>
-      </Box>
-
       {/* Imagen con texto alineado a la derecha */}
       <Box
         component={motion.div}
@@ -52,15 +39,29 @@ const Header: React.FC = () => {
           component={motion.p}
           variants={textVariants}
           sx={{
-            fontSize: "30px",
+            fontSize: "40px",
             fontWeight: "400",
             color: "#4E4E4E",
             textAlign: "right",
-            paddingRight: "5%"
+            paddingRight: "5%",
+            fontFamily: "Baskerville"
           }}
         >
           Somos mujeres creando
         </Typography>
+      </Box>
+
+      {/* Texto superior */}
+      <Box
+        sx={{
+          textAlign: "center",
+          padding: "16px",
+          fontSize: "18px",
+          fontWeight: "400",
+          color: "#4E4E4E",
+        }}
+      >
+        Un espacio destinado a la <strong>creación</strong> y <strong>desarrollo</strong> de trajes de baño situado en la <strong>Península de Yucatán</strong>
       </Box>
     </>
   );

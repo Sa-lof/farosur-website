@@ -11,8 +11,8 @@ const ImpactoSocial = () => {
         textAlign: "center",
         py: 8,
         px: 4,
-        height: "100vh", // ✅ Ocupar toda la pantalla
-        display: "flex", // ✅ Para centrar contenido verticalmente
+        height: "100vh", 
+        display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
@@ -24,7 +24,7 @@ const ImpactoSocial = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         variant="h3"
-        sx={{ fontWeight: "bold", mb: 3 }}
+        sx={{ fontWeight: "bold", mb: 3, fontFamily: "BAKERSVILE"}}
       >
         Impacto social positivo
       </Typography>
