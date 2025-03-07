@@ -17,10 +17,52 @@ import Veronica from "../../assets/stories/Veronica.jpg";
 
 const historyData = [
   {
+    title: "Rosalba",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
+    image: Rosalba,
+  },
+  {
+    title: "Ruth",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
+    image: Ruth,
+  },
+  {
+    title: "Leticia",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
+    image: Leticia,
+  },
+  {
+    title: "Teresa",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
+    image: Teresa,
+  },
+  {
+    title: "Socorro",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
+    image: Socorro,
+  },
+  {
     title: "Antonio",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
     image: Antonio,
+  },
+  {
+    title: "Glendy",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
+    image: Glendy,
+  },
+  {
+    title: "Verónica",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
+    image: Veronica,
   },
   {
     title: "Araceli",
@@ -35,18 +77,6 @@ const historyData = [
     image: Concepcion,
   },
   {
-    title: "Glendy",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
-    image: Glendy,
-  },
-  {
-    title: "Leticia",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
-    image: Leticia,
-  },
-  {
     title: "Luisa",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
@@ -57,36 +87,6 @@ const historyData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
     image: Rita,
-  },
-  {
-    title: "Rosalba",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
-    image: Rosalba,
-  },
-  {
-    title: "Ruth",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
-    image: Ruth,
-  },
-  {
-    title: "Socorro",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
-    image: Socorro,
-  },
-  {
-    title: "Teresa",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
-    image: Teresa,
-  },
-  {
-    title: "Verónica",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus molestie velit, sed sollicitudin ante.",
-    image: Veronica,
   },
 ];
 
