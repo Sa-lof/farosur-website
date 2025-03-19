@@ -15,9 +15,7 @@ const Footer = () => {
     >
       <Grid container spacing={4} alignItems="center">
         <Grid item xs={12} md={6}>
-          <Typography variant="h6" fontStyle="italic" sx={{fontFamily: 'Libre Baskerville, serif', fontSize:"23px"}}>
-            No existen límites para lo que las mujeres podemos lograr juntas
-          </Typography>
+
           <img
               src={Logo}
               alt="Faro Sur Logo"

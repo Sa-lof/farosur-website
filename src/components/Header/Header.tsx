@@ -1,57 +1,36 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
-import { motion } from "framer-motion";
-
-const headerVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
-};
-
-const textVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.3 } },
-};
+import { Box } from "@mui/material";
 
 const Header: React.FC = () => {
   return (
     <>
-      {/* Imagen con texto alineado a la derecha */}
+      {/* Background video */}
       <Box
-        component={motion.div}
-        initial="hidden"
-        animate="visible"
-        variants={headerVariants}
         sx={{
           position: "relative",
-          height: "70vh",
+          height: "90vh",
           width: "100%",
-          backgroundImage: "url('https://www.solumex.com/wp-content/uploads/2013/11/dummy-image-square.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          display: "flex",
-          alignItems: "flex-end",
-          justifyContent: "flex-end",
-          paddingBottom: "32px",
-          paddingRight: "48px",
+          overflow: "hidden",
         }}
       >
-        <Typography
-          component={motion.p}
-          variants={textVariants}
-          sx={{
-            fontSize: "40px",
-            fontWeight: "400",
-            color: "#4E4E4E",
-            textAlign: "right",
-            paddingRight: "5%",
-            fontFamily: "Baskerville"
+        <iframe
+          src="https://www.youtube.com/embed/T2L37nTqqhM?autoplay=1&mute=1&controls=0&loop=1&playlist=T2L37nTqqhM&modestbranding=1&rel=0&disablekb=1&fs=0&loop=1"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            border: "none",
+            pointerEvents: "none", // prevents user interaction (e.g. pausing)
           }}
-        >
-          Somos mujeres creando
-        </Typography>
+          allow="autoplay; encrypted-media"
+          frameBorder="0"
+          title="Background Video"
+        ></iframe>
       </Box>
 
-      {/* Texto superior */}
+      {/* Header text */}
       <Box
         sx={{
           textAlign: "center",
@@ -61,7 +40,9 @@ const Header: React.FC = () => {
           color: "#4E4E4E",
         }}
       >
-        Un espacio destinado a la <strong>creación</strong> y <strong>desarrollo</strong> de trajes de baño situado en la <strong>Península de Yucatán</strong>
+        Un espacio destinado a la <strong>creación</strong> y{" "}
+        <strong>desarrollo</strong> de trajes de baño, situado en la{" "}
+        <strong>Península de Yucatán, México</strong>
       </Box>
     </>
   );
