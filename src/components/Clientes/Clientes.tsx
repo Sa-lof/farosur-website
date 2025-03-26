@@ -31,8 +31,9 @@ const clientsData = [
   {
     title: "EUROSOL CONCEPT",
     description:
-      "Marca mexicana que crea conceptos de playa para mujeres que buscan funcionalidad y control abdominal. Actualmente la marca es diseñada por Gricelda Zarco y se inspira en la flora y fauna tropical, creando estampados posicionados y exclusivos para la marca.",
+      "Marca mexicana que crea conceptos de playa para mujeres que buscan funcionalidad y control abdominal. Actualmente la marca es diseñada por Gricelda Zarco y se inspira en la flora y fauna tropical, creando estampados posicionados y exclusivos para la marca. De venta en exclusiva para Sears.",
     image: client2,
+    link: "https://www.sears.com.mx"
   },
 ];
 

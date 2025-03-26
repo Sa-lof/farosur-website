@@ -14,7 +14,7 @@ const Home: React.FC = () => {
   return (
     <Box sx={{ overflowX: "hidden", backgroundColor: "#F8F7F5"}}>
       <Navbar />
-      <Box>
+      <Box sx={{ marginTop: "100px" }}>
         <Header />
         <Origen />
         <History />

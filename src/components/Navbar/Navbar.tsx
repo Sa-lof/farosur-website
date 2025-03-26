@@ -39,11 +39,12 @@ function Navbar() {
 
   return (
     <AppBar
-      position="sticky"
+      position="fixed"
       sx={{
-        backgroundColor: "transparent",
+        backgroundColor: "#F8F7F5",
         boxShadow: "none",
-        margin: "32px 0",
+        paddingTop:3,
+        paddingBottom: 3
       }}
     >
       <Container maxWidth="xl">

@@ -6,12 +6,12 @@ const Origenes: React.FC = () => {
     <Box
       sx={{
         backgroundColor: "#F8F6F3",
-        height: "80vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        px: 4, // Padding para evitar que el contenido toque los bordes
-        py: 4,
+        px: 4,
+        paddingTop: 10,
+        paddingBottom: 8
       }}
       id="home"
     >

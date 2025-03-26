@@ -35,6 +35,8 @@ const Footer = () => {
             >
               atencionalcliente@grupoeurosol.com{" "}
             </Link>
+          </Typography>
+          <Typography variant="body1" mb={1}>
              o enviar un whatsapp al número
             <Typography component="span" fontWeight="bold">
               {" "}+52 999 304 8582.
@@ -48,13 +50,13 @@ const Footer = () => {
           </Typography>
 
           <Box mt={2} display="flex" gap={2}>
-            <Link href="#" color="inherit">
+            <Link href="https://www.facebook.com/share/18qw7WHqkS/?mibextid=wwXIfr" color="inherit">
               <Facebook fontSize="large" />
             </Link>
-            <Link href="#" color="inherit">
+            <Link href="https://www.instagram.com/farosuryuc/?igsh=dzJ5ZmFmNThwajBp#" color="inherit">
               <Instagram fontSize="large" />
             </Link>
-            <Link href="#" color="inherit">
+            <Link href="www.linkedin.com/in/ruth-ramirez-2847ba33a" color="inherit">
               <LinkedIn fontSize="large" />
             </Link>
           </Box>
